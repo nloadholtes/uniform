@@ -5,7 +5,7 @@ import (
 	_ "github.com/fabioxgn/go-bot/commands/catfacts"
 	_ "github.com/fabioxgn/go-bot/commands/catgif"
 	_ "github.com/fabioxgn/go-bot/commands/chucknorris"
-	_ "github.com/nloaholtes/uniform/ratt"
+	_ "github.com/nloadholtes/uniform/ratt"
 	// Import all the commands you wish to use
 	"os"
 	"strings"
