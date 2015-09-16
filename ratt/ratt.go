@@ -16,7 +16,7 @@ var (
 	}
 )
 
-func ratt(command *bot.PassiveCmd) (string, err) {
+func ratt(command *bot.PassiveCmd) (msg string, err error) {
 	if re.MatchString(command.Raw) {
 		return ratt_lyrics[rand.Intn(len(ratt_lyrics))], nil
 	}
