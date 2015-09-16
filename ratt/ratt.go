@@ -24,5 +24,5 @@ func ratt(command *bot.PassiveCmd) (msg string, err error) {
 }
 
 func init() {
-	bot.RegisterCommand("ratt", "Spouts out lyrics from the band Ratt", "whatever", ratt)
+	bot.RegisterPassiveCommand("ratt", ratt)
 }
