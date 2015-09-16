@@ -12,7 +12,7 @@ var (
 		    "What goes around comes around",
 		    "Dance dance dance",
 		    "Round and round",
-		    "You should know, by now"
+		    "You should know, by now",
 		    }
 )
 
