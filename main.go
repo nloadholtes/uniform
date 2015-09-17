@@ -9,9 +9,19 @@ import (
 	// Import all the commands you wish to use
 	"os"
 	"strings"
+	"flag"
 )
 
+var slack_flag bool
+
 func main() {
+	flag.BoolVar(&slack_flag, "slack", false, "help message for flagname")
+
+	flag.Parse()
+
+	if slack_flag {
+		
+	} else {
 	bot.Run(&bot.Config{
 		Server:   os.Getenv("IRC_SERVER"),
 		Channels: strings.Split(os.Getenv("IRC_CHANNELS"), ","),
@@ -20,4 +30,8 @@ func main() {
 		Password: os.Getenv("IRC_PASSWORD"),
 		UseTLS:   true,
 		Debug:    os.Getenv("DEBUG") != ""})
+	}
+}
+
+func init() {
 }
