@@ -18,9 +18,8 @@ func main() {
 	flag.BoolVar(&slack_flag, "slack", false, "help message for flagname")
 
 	flag.Parse()
-
 	if slack_flag {
-
+		bot.RunSlack(os.Getenv("SLACK_TOKEN"))
 	} else {
 		bot.Run(&bot.Config{
 			Server:   os.Getenv("IRC_SERVER"),
