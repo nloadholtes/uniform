@@ -7,9 +7,9 @@ import (
 	_ "github.com/fabioxgn/go-bot/commands/chucknorris"
 	_ "github.com/nloadholtes/uniform/ratt"
 	// Import all the commands you wish to use
+	"flag"
 	"os"
 	"strings"
-	"flag"
 )
 
 var slack_flag bool
@@ -20,16 +20,16 @@ func main() {
 	flag.Parse()
 
 	if slack_flag {
-		
+
 	} else {
-	bot.Run(&bot.Config{
-		Server:   os.Getenv("IRC_SERVER"),
-		Channels: strings.Split(os.Getenv("IRC_CHANNELS"), ","),
-		User:     os.Getenv("IRC_USER"),
-		Nick:     os.Getenv("IRC_NICK"),
-		Password: os.Getenv("IRC_PASSWORD"),
-		UseTLS:   true,
-		Debug:    os.Getenv("DEBUG") != ""})
+		bot.Run(&bot.Config{
+			Server:   os.Getenv("IRC_SERVER"),
+			Channels: strings.Split(os.Getenv("IRC_CHANNELS"), ","),
+			User:     os.Getenv("IRC_USER"),
+			Nick:     os.Getenv("IRC_NICK"),
+			Password: os.Getenv("IRC_PASSWORD"),
+			UseTLS:   true,
+			Debug:    os.Getenv("DEBUG") != ""})
 	}
 }
 
